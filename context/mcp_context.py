@@ -1,4 +1,6 @@
 
+from tools.tools import calculator_tool
+
 class MCPContext:
     def __init__(self, system_prompt):
         self.system = system_prompt
@@ -19,7 +21,7 @@ class MCPContext:
         self.memory.append(message)
 
     def add_ai_reponse(self, message):
-        self.message.append({
+        self.messages.append({
             "role": "assistant",
             "content": message
         })
